@@ -921,7 +921,11 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
             [self.leftDrawerViewController.view setHidden:YES];
             [self.rightDrawerViewController.view setHidden:YES];
         }
-        [self setNeedsStatusBarAppearanceUpdateIfSupported];
+        [UIView
+         animateWithDuration:(0.3)
+         animations:^{
+             [self setNeedsStatusBarAppearanceUpdateIfSupported];
+         }];
     }
 }
 
